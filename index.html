@@ -3,136 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Sholat - Utama</title>
+    <title>Web Sholat - Jadwal Sholat & Info Islami</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Web Sholat</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Beranda</a></li>
-                <li><a href="#jadwal">Jadwal Sholat</a></li>
-                <li><a href="#quran">Al-Qur'an</a></li>
-                <li><a href="#doa">Doa Harian</a></li>
-                <li><a href="#dzikir">Dzikir</a></li>
-                <li><a href="#lokasi">Cari Masjid</a></li>
-                <li><a href="#kiblat">Arah Kiblat</a></li>
-                <li><a href="#artikel">Artikel Islam</a></li>
-                <li><a href="#kajian">Video Kajian</a></li>
-                <li><a href="#tanya-jawab">Tanya Jawab</a></li>
-                <li><a href="#komunitas">Komunitas</a></li>
-                <li><a href="#donasi">Donasi</a></li>
-                <li><a href="#about">Tentang Kami</a></li>
-                <li><a href="#kontak">Kontak</a></li>
-                <li><a href="#profil">Profil Pengguna</a></li>
-                <li><a href="#notifikasi">Notifikasi</a></li>
-                <li><a href="#pengaturan">Pengaturan</a></li>
-                <li><a href="#riwayat">Riwayat Amalan</a></li>
-                <li><a href="#saran">Saran & Kritik</a></li>
-                <li><a href="#login-section">Login</a></li>
-            </ul>
-        </nav>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-mosque"></i> Web Sholat</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#jadwal"><i class="fas fa-clock"></i> Jadwal Sholat</a></li>
+                    <li><a href="#quran"><i class="fas fa-book-quran"></i> Al-Qur'an</a></li>
+                    <li><a href="#doa"><i class="fas fa-hands-praying"></i> Doa Harian</a></li>
+                    <li><a href="#artikel"><i class="fas fa-newspaper"></i> Artikel Islam</a></li>
+                    <li><a href="#login-section"><i class="fas fa-user-circle"></i> Login</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section id="home" class="feature-section">
-            <h2>Beranda</h2>
-            <p>Selamat datang di Web Sholat. Semoga website ini bermanfaat untuk ibadah Anda.</p>
-        </section>
+    <main class="container">
+        <section id="jadwal" class="feature-section jadwal-sholat-section">
+            <div class="section-header">
+                <h2><i class="fas fa-clock"></i> Jadwal Sholat Hari Ini</h2>
+                <div class="location-info">
+                    <p>Lokasi: <span id="currentLocation">Gresik, Jawa Timur</span></p>
+                    <p>Tanggal: <span id="currentDate">Rabu, 09 Juli 2025</span></p>
+                </div>
+            </div>
 
-        <section id="jadwal" class="feature-section">
-            <h2>Jadwal Sholat</h2>
-            <p>Informasi jadwal sholat berdasarkan lokasi Anda. (Fitur ini membutuhkan API lokasi dan jadwal sholat).</p>
+            <div class="jadwal-grid">
+                <div class="prayer-time-card">
+                    <h3>Subuh</h3>
+                    <p class="time">04:30</p>
+                    <p class="countdown">Waktu tersisa: 01:23:45</p>
+                </div>
+                <div class="prayer-time-card">
+                    <h3>Dzuhur</h3>
+                    <p class="time">11:55</p>
+                    <p class="countdown">Waktu tersisa: 01:23:45</p>
+                </div>
+                <div class="prayer-time-card">
+                    <h3>Ashar</h3>
+                    <p class="time">15:15</p>
+                    <p class="countdown">Waktu tersisa: 01:23:45</p>
+                </div>
+                <div class="prayer-time-card">
+                    <h3>Maghrib</h3>
+                    <p class="time">17:48</p>
+                    <p class="countdown">Waktu tersisa: 01:23:45</p>
+                </div>
+                <div class="prayer-time-card">
+                    <h3>Isya</h3>
+                    <p class="time">19:00</p>
+                    <p class="countdown">Waktu tersisa: 01:23:45</p>
+                </div>
+            </div>
+
+            <div class="jadwal-detail-table">
+                <h3>Jadwal Lengkap</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Waktu Sholat</th>
+                            <th>Jam</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Imsak</td><td>04:20</td></tr>
+                        <tr><td>Subuh</td><td>04:30</td></tr>
+                        <tr><td>Terbit</td><td>05:45</td></tr>
+                        <tr><td>Dzuhur</td><td>11:55</td></tr>
+                        <tr><td>Ashar</td><td>15:15</td></tr>
+                        <tr><td>Maghrib</td><td>17:48</td></tr>
+                        <tr><td>Isya</td><td>19:00</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="note-text">*Jadwal ini hanya contoh. Untuk jadwal akurat, aktifkan JavaScript dan koneksi internet Anda.</p>
         </section>
 
         <section id="quran" class="feature-section">
-            <h2>Al-Qur'an</h2>
-            <p>Baca Al-Qur'an lengkap dengan terjemahan. (Membutuhkan database atau API Al-Qur'an).</p>
+            <h2><i class="fas fa-book-quran"></i> Al-Qur'an</h2>
+            <p>Telusuri Al-Qur'an lengkap dengan terjemahan dan tafsir. (Membutuhkan integrasi API Al-Qur'an atau database).</p>
+            <div class="card-feature">
+                <h3>Fitur Quran</h3>
+                <ul>
+                    <li>Baca per Surat</li>
+                    <li>Cari Ayat</li>
+                    <li>Dengarkan Murottal</li>
+                    <li>Terjemahan Bahasa Indonesia</li>
+                </ul>
+                <button class="btn-main">Lihat Al-Qur'an Lengkap</button>
+            </div>
         </section>
 
         <section id="doa" class="feature-section">
-            <h2>Doa Harian</h2>
-            <p>Kumpulan doa-doa harian dan doa khusus.</p>
-        </section>
-
-        <section id="dzikir" class="feature-section">
-            <h2>Dzikir</h2>
-            <p>Kumpulan bacaan dzikir pagi, petang, dan setelah sholat.</p>
-        </section>
-
-        <section id="lokasi" class="feature-section">
-            <h2>Cari Masjid</h2>
-            <p>Temukan masjid terdekat dari lokasi Anda. (Membutuhkan API Google Maps atau sejenisnya).</p>
-        </section>
-
-        <section id="kiblat" class="feature-section">
-            <h2>Arah Kiblat</h2>
-            <p>Menentukan arah kiblat dari lokasi Anda. (Membutuhkan sensor kompas pada perangkat atau perhitungan geografis).</p>
+            <h2><i class="fas fa-hands-praying"></i> Doa Harian</h2>
+            <p>Kumpulan doa-doa pilihan untuk diamalkan setiap hari.</p>
+            <div class="card-feature">
+                <h3>Kumpulan Doa</h3>
+                <ul>
+                    <li>Doa Sebelum Makan</li>
+                    <li>Doa Tidur</li>
+                    <li>Doa Keluar Rumah</li>
+                    <li>Doa Setelah Sholat</li>
+                </ul>
+                <button class="btn-main">Telusuri Doa Lainnya</button>
+            </div>
         </section>
 
         <section id="artikel" class="feature-section">
-            <h2>Artikel Islam</h2>
-            <p>Berbagai artikel seputar ajaran Islam dan tips beribadah.</p>
+            <h2><i class="fas fa-newspaper"></i> Artikel Islam</h2>
+            <p>Baca artikel inspiratif dan informatif seputar Islam dan kehidupan muslim.</p>
+            <div class="article-grid">
+                <div class="article-card">
+                    <h3>Pentingnya Sholat Tepat Waktu</h3>
+                    <p>Membahas keutamaan menjaga sholat di awal waktu.</p>
+                    <a href="#" class="read-more">Baca Selengkapnya</a>
+                </div>
+                <div class="article-card">
+                    <h3>Hikmah Bulan Ramadhan</h3>
+                    <p>Menjelajahi makna dan kebaikan di bulan suci Ramadhan.</p>
+                    <a href="#" class="read-more">Baca Selengkapnya</a>
+                </div>
+            </div>
         </section>
 
-        <section id="kajian" class="feature-section">
-            <h2>Video Kajian</h2>
-            <p>Koleksi video ceramah dan kajian Islam dari ustadz terkemuka.</p>
+        <section id="lokasi" class="feature-section">
+            <h2><i class="fas fa-map-marker-alt"></i> Cari Masjid</h2>
+            <p>Temukan masjid terdekat di sekitar lokasi Anda. (Membutuhkan integrasi Google Maps API).</p>
+            <button class="btn-main">Cari Masjid Terdekat</button>
         </section>
 
-        <section id="tanya-jawab" class="feature-section">
-            <h2>Tanya Jawab</h2>
-            <p>Ajukan pertanyaan seputar Islam atau cari jawaban dari pertanyaan yang sudah ada.</p>
-        </section>
-
-        <section id="komunitas" class="feature-section">
-            <h2>Komunitas</h2>
-            <p>Forum diskusi atau grup untuk berbagi pengalaman dan ilmu agama.</p>
-        </section>
-
-        <section id="donasi" class="feature-section">
-            <h2>Donasi</h2>
-            <p>Salurkan donasi Anda untuk kegiatan syiar Islam atau yayasan. (Membutuhkan integrasi gateway pembayaran).</p>
-        </section>
-
-        <section id="about" class="feature-section">
-            <h2>Tentang Kami</h2>
-            <p>Informasi mengenai visi, misi, dan tim di balik Web Sholat.</p>
-        </section>
-
-        <section id="kontak" class="feature-section">
-            <h2>Kontak</h2>
-            <p>Hubungi kami untuk pertanyaan atau kerja sama.</p>
-        </section>
-
-        <section id="profil" class="feature-section">
-            <h2>Profil Pengguna</h2>
-            <p>Kelola informasi akun Anda dan preferensi. (Membutuhkan sistem user management).</p>
-        </section>
-
-        <section id="notifikasi" class="feature-section">
-            <h2>Notifikasi</h2>
-            <p>Pemberitahuan penting seperti jadwal sholat berikutnya atau pesan baru.</p>
-        </section>
-
-        <section id="pengaturan" class="feature-section">
-            <h2>Pengaturan</h2>
-            <p>Atur preferensi aplikasi seperti tema, ukuran font, dll.</p>
-        </section>
-
-        <section id="riwayat" class="feature-section">
-            <h2>Riwayat Amalan</h2>
-            <p>Catat dan lacak amalan harian Anda. (Membutuhkan database user spesifik).</p>
-        </section>
-
-        <section id="saran" class="feature-section">
-            <h2>Saran & Kritik</h2>
-            <p>Sampaikan saran dan kritik Anda untuk pengembangan website.</p>
+        <section id="kiblat" class="feature-section">
+            <h2><i class="fas fa-kaaba"></i> Arah Kiblat</h2>
+            <p>Tentukan arah kiblat dengan akurat dari posisi Anda. (Membutuhkan akses sensor kompas atau perhitungan geografis).</p>
+            <button class="btn-main">Tentukan Arah Kiblat</button>
         </section>
 
         <section id="login-section" class="feature-section login-form-container">
-            <h2>Login</h2>
+            <h2><i class="fas fa-sign-in-alt"></i> Login</h2>
             <form id="loginForm">
                 <div class="form-group">
                     <label for="username">Username:</label>
@@ -142,20 +157,28 @@
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="password" required>
                 </div>
-                <button type="submit" id="loginAdmin">Login Admin</button>
-                <button type="button" id="loginGuest">Login Tamu</button>
-                <p id="loginMessage"></p>
+                <button type="submit" id="loginAdmin" class="btn-primary">Login Admin</button>
+                <button type="button" id="loginGuest" class="btn-secondary">Login Tamu</button>
+                <p id="loginMessage" class="message"></p>
             </form>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Web Sholat. Hak Cipta Dilindungi.</p>
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Web Sholat. Hak Cipta Dilindungi.</p>
+            <div class="footer-links">
+                <a href="#">Tentang Kami</a> |
+                <a href="#">Kontak</a> |
+                <a href="#">Kebijakan Privasi</a>
+            </div>
+        </div>
     </footer>
 
     <script>
+        // CLIENT-SIDE LOGIN SIMULATION (NOT SECURE FOR PRODUCTION)
         document.getElementById('loginAdmin').addEventListener('click', function(event) {
-            event.preventDefault(); // Mencegah form submit default
+            event.preventDefault();
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
             const loginMessage = document.getElementById('loginMessage');
@@ -163,6 +186,7 @@
             if (username === 'admin' && password === '123') {
                 loginMessage.textContent = 'Berhasil login sebagai Admin!';
                 loginMessage.style.color = 'green';
+                // Di sini Anda akan mengarahkan ke dashboard admin atau mengatur sesi
             } else {
                 loginMessage.textContent = 'Username atau password Admin salah.';
                 loginMessage.style.color = 'red';
@@ -170,10 +194,19 @@
         });
 
         document.getElementById('loginGuest').addEventListener('click', function(event) {
-            event.preventDefault(); // Mencegah form submit default
+            event.preventDefault();
             const loginMessage = document.getElementById('loginMessage');
             loginMessage.textContent = 'Anda login sebagai Tamu.';
             loginMessage.style.color = 'blue';
+            // Di sini Anda akan mengarahkan ke halaman utama atau mengatur sesi tamu
+        });
+
+        // Update current date (basic client-side)
+        document.addEventListener('DOMContentLoaded', () => {
+            const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const today = new Date();
+            document.getElementById('currentDate').textContent = today.toLocaleDateString('id-ID', dateOptions);
+            // Untuk lokasi, ini hanya teks statis. Perlu geolocation API sungguhan.
         });
     </script>
 </body>
