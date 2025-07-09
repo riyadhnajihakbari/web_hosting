@@ -1,16 +1,185 @@
-#jumbotron {
-  padding-top: 2rem;
-  background-color: rgba(255, 230, 0, 0.192);
-  text-align: center;
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
 }
 
-.bgcolor {
-  background-color: rgba(255, 230, 0, 0.192);
+/* Header Styles */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-#footer {
-  margin-top: 3rem;
-  text-align: center;
-  padding: 3px;
-  font-size: 15px;
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0.5rem 0.8rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: #45a049;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Feature Section Styles */
+.feature-section {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.feature-section:last-child {
+    border-bottom: none;
+}
+
+.feature-section h2 {
+    color: #333;
+    font-size: 2rem;
+    margin-top: 0;
+    border-left: 5px solid #4CAF50;
+    padding-left: 10px;
+}
+
+/* Login Form Specific Styles */
+.login-form-container {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.login-form-container button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.login-form-container button:hover {
+    background-color: #45a049;
+}
+
+#loginMessage {
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    main {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .feature-section {
+        padding: 15px;
+    }
+
+    .feature-section h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .feature-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="password"] {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .login-form-container button {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
 }
